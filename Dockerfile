@@ -1,4 +1,4 @@
-FROM php:7.2.3
+FROM php:7.3.26
 
 # Install PHP extensions deps
 RUN apt-get update \
@@ -64,6 +64,7 @@ COPY . /app
 WORKDIR /app
 
 #RUN composer install --no-dev
+
 RUN composer install
 
 ENTRYPOINT ["php", "bin/console"]
